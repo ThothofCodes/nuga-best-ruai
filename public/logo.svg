@@ -1,0 +1,13 @@
+<svg width="340" height="120" viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mark: concentric rings = warmth radiating from a heated jade stone -->
+  <g transform="translate(60,60)">
+    <circle r="48" fill="none" stroke="#8B9A7E" stroke-width="3" opacity="0.55"/>
+    <circle r="34" fill="none" stroke="#2C4438" stroke-width="3.5" opacity="0.8"/>
+    <circle r="20" fill="none" stroke="#BE6A34" stroke-width="4" opacity="0.95"/>
+    <circle r="7" fill="#BE6A34"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="130" y="63" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-size="34" font-weight="600" fill="#2C4438">Nuga Best</text>
+  <text x="131" y="84" font-family="'Karla', 'Segoe UI', sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#BE6A34">RUAI</text>
+</svg>

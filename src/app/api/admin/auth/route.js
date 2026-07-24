@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import crypto from "crypto";
 import { SESSION_CONFIG } from "@/lib/bookingConfig";
+import { ACCESS_DOMAINS } from "@/lib/config";
 
 function safeCompare(a, b) {
   try {
@@ -23,13 +24,25 @@ function getToken(password) {
 
 export async function POST(request) {
   try {
-    const { password } = await request.json();
+    const { email, password } = await request.json();
     const adminPassword = process.env.ADMIN_PASSWORD;
 
     if (!adminPassword) {
       return NextResponse.json(
         { error: "ADMIN_PASSWORD is not configured on the server." },
         { status: 500 }
+      );
+    }
+
+    // Validate email domain
+    if (!email) {
+      return NextResponse.json({ error: "Email is required." }, { status: 400 });
+    }
+    const domain = email.split("@")[1]?.toLowerCase();
+    if (!domain || !ACCESS_DOMAINS.includes(domain)) {
+      return NextResponse.json(
+        { error: `Email domain not allowed. Accepted domains: ${ACCESS_DOMAINS.join(", ")}` },
+        { status: 403 }
       );
     }
 

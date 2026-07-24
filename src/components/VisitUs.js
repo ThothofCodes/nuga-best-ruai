@@ -21,7 +21,18 @@ export default function VisitUs() {
                 <div className="text-sm font-semibold text-ember tracking-widest uppercase mb-1">
                   Call or WhatsApp
                 </div>
-                <div className="text-ink">{business.phone}</div>
+                <div className="text-ink space-y-2">
+                  {business.phone ? <div>{business.phone}</div> : null}
+                  <a
+                    href="https://wa.me/+254786472853"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-jade px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                  >
+                    <span>💬</span>
+                    <span>WhatsApp us</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

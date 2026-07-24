@@ -22,7 +22,7 @@ export default function BookingOptions() {
             <ul className="font-body text-sm text-ink space-y-2 mb-8">
               <li>Gatwick Mall, Ruai Town</li>
               <li>Walk in or book ahead</li>
-              <li>Bed, stones, and heat ready and waiting</li>
+              <li>Mat, stones, and heat ready and waiting</li>
             </ul>
             <Link
               href="/book?type=on-site"
@@ -39,9 +39,9 @@ export default function BookingOptions() {
             <div className="font-display text-3xl font-semibold text-jade mb-1">
               {offSite.currency} {offSite.amount}
             </div>
-            <div className="font-body text-sm text-ink/70 mb-6">per {offSite.duration}, transport included</div>
+            <div className="font-body text-sm text-ink/70 mb-6">per {offSite.duration}, transport included Charges apply for clients within Ruai Town</div>
             <ul className="font-body text-sm text-ink space-y-2 mb-8">
-              <li>Anywhere we can bring the bed</li>
+              <li>Anywhere we can bring the equipment</li>
               <li>Drop a location pin when you book</li>
               <li>Book ahead so equipment gets there on time</li>
             </ul>

@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Mark from "./Mark";
-import { business } from "@/lib/config";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -19,15 +18,15 @@ export default function Nav() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 font-body text-sm">
-          <a href="/#how-it-works" className="text-parchment hover:text-ember transition-colors">
+          <Link href="/#how-it-works" className="text-parchment hover:text-ember transition-colors">
             How it works
-          </a>
-          <a href="/#book" className="text-parchment hover:text-ember transition-colors">
+          </Link>
+          <Link href="/#book" className="text-parchment hover:text-ember transition-colors">
             Services
-          </a>
-          <a href="/#visit" className="text-parchment hover:text-ember transition-colors">
+          </Link>
+          <Link href="/#visit" className="text-parchment hover:text-ember transition-colors">
             Visit
-          </a>
+          </Link>
         </nav>
 
         <Link
@@ -46,15 +45,15 @@ export default function Nav() {
 
       {open && (
         <div className="md:hidden bg-jade border-t border-white/10 px-5 py-4 flex flex-col gap-4 font-body text-sm">
-          <a href="/#how-it-works" className="text-parchment" onClick={() => setOpen(false)}>
+          <Link href="/#how-it-works" className="text-parchment" onClick={() => setOpen(false)}>
             How it works
-          </a>
-          <a href="/#book" className="text-parchment" onClick={() => setOpen(false)}>
+          </Link>
+          <Link href="/#book" className="text-parchment" onClick={() => setOpen(false)}>
             Services
-          </a>
-          <a href="/#visit" className="text-parchment" onClick={() => setOpen(false)}>
+          </Link>
+          <Link href="/#visit" className="text-parchment" onClick={() => setOpen(false)}>
             Visit
-          </a>
+          </Link>
           <Link
             href="/book"
             className="btn-primary text-center font-semibold px-5 py-2.5 rounded-full"
